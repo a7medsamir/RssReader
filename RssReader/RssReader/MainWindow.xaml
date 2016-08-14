@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RssReader"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="404.356" Width="1211.742">
     <Grid>
-        
+        <DockPanel HorizontalAlignment="Left" Height="353" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="179">
+            <ListView x:Name="listView" Height="343" VerticalAlignment="Top" Width="161">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+                <ListViewItem Content="ListViewItem" Margin="0"/>
+            </ListView>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="353" LastChildFill="False" Margin="189,10,0,0" VerticalAlignment="Top" Width="318" RenderTransformOrigin="-0.042,-0.135">
+            <ListView x:Name="listView1" Height="343" VerticalAlignment="Top" Width="313">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+                <ListViewItem Content="ListViewItem" Margin="0"/>
+            </ListView>
+        </DockPanel>
+        <DockPanel HorizontalAlignment="Left" Height="353" LastChildFill="False" Margin="507,10,0,0" VerticalAlignment="Top" Width="687" RenderTransformOrigin="-0.042,-0.135">
+
+           
+        </DockPanel>
     </Grid>
 </Window>
