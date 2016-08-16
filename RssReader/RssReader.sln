@@ -5,12 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssReader", "RssReader\RssReader.csproj", "{562F19A3-2613-4914-BAF9-9B3A38B801F2}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{07D7E435-F4B2-4B5E-807A-6679F969BBF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{39FDB50F-152B-46E5-9F44-6F42B9322C21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTest", "SharedTest\SharedTest.csproj", "{CA1F54C2-2A41-4451-BCA4-25CC3EDBFFBC}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Shared\Shared.projitems*{07d7e435-f4b2-4b5e-807a-6679f969bbf4}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -20,6 +19,14 @@ Global
 		{562F19A3-2613-4914-BAF9-9B3A38B801F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{562F19A3-2613-4914-BAF9-9B3A38B801F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{562F19A3-2613-4914-BAF9-9B3A38B801F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FDB50F-152B-46E5-9F44-6F42B9322C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FDB50F-152B-46E5-9F44-6F42B9322C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FDB50F-152B-46E5-9F44-6F42B9322C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FDB50F-152B-46E5-9F44-6F42B9322C21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1F54C2-2A41-4451-BCA4-25CC3EDBFFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1F54C2-2A41-4451-BCA4-25CC3EDBFFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1F54C2-2A41-4451-BCA4-25CC3EDBFFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1F54C2-2A41-4451-BCA4-25CC3EDBFFBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
