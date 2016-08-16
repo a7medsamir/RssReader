@@ -14,7 +14,10 @@ namespace Shared.Helpers
         Atom,
         RDF
     }
-
+    /// <summary>
+    /// Helper parser method from :
+    /// http://www.anotherchris.net/csharp/simplified-csharp-atom-and-rss-feed-parser/
+    /// </summary>
     public class FeedParser
     {
         public IList<Item> Parse(string url, FeedType feedType)
