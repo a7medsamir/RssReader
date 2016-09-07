@@ -7,18 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="404.356" Width="1211.742">
     <Grid>
-        <DockPanel HorizontalAlignment="Left" Height="353" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="179">
-            <ListView x:Name="listView" Height="343" VerticalAlignment="Top" Width="161">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn/>
-                    </GridView>
-                </ListView.View>
-                <ListViewItem Content="ListViewItem" Margin="0"/>
-            </ListView>
+        <DockPanel HorizontalAlignment="Left" Height="353" LastChildFill="False" Margin="10,10,0,0" VerticalAlignment="Top" Width="174">
+            <StackPanel HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100">
+                <Button x:Name="button" Content="Add Feed" Width="75" RenderTransformOrigin="0.907,-0.957"/>
+
+                <ListView x:Name="listView"  VerticalAlignment="Top" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn/>
+                        </GridView>
+                    </ListView.View>
+                    <ListViewItem Content="ListViewItem" Margin="0"/>
+                </ListView>
+
+            </StackPanel>
         </DockPanel>
         <DockPanel HorizontalAlignment="Left" Height="353" LastChildFill="False" Margin="189,10,0,0" VerticalAlignment="Top" Width="318" RenderTransformOrigin="-0.042,-0.135">
-            <ListView x:Name="listView1" Height="343" VerticalAlignment="Top" Width="313">
+            <ListView x:Name="listView1" Height="353" VerticalAlignment="Top" Width="313">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn/>
