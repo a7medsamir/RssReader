@@ -9,5 +9,6 @@ namespace Shared.Model
     {
        public FeedType FeedType { get; set; }
         public Uri Url { get; set; }
+        public string DisplayName { get; set; }
     }
 }

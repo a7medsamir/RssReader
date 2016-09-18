@@ -1,0 +1,3 @@
+﻿<Feeds>
+  <Feed  FeedType="RSS"  Url="http://feeds.hanselman.com/ScottHanselman"  DisplayName = "Scott Hanselman Blog"/>
+</Feeds>

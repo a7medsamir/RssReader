@@ -44,10 +44,11 @@
     <Compile Include="Model\Feed.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\FeedDataSource.cs" />
+    <Compile Include="ViewModel\RssReaderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Design\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
