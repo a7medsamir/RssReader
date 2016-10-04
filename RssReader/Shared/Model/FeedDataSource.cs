@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Xml.Linq;
 using Shared.Helpers;
@@ -19,8 +20,8 @@ namespace Shared.ViewModel
             {
                 listCollectionFeeds.Add(new Feed()
                 {
-                   // FeedType = !string.IsNullOrEmpty(feed.Attribute("FeedType").Value)?((FeedType))Enum.Parse(typeof(FeedType), feed.Attribute("FeedType").Value):FeedType.RSS),
-                    Url = new Uri(feed.Attribute("Url").Value),
+                    // FeedType = !string.IsNullOrEmpty(feed.Attribute("FeedType").Value)?((FeedType))Enum.Parse(typeof(FeedType), feed.Attribute("FeedType").Value):FeedType.RSS),
+                    Url = feed.Attribute("Url").Value,
                     DisplayName = feed.Attribute("DisplayName").Value
                 });
             }
@@ -36,10 +37,18 @@ namespace Shared.ViewModel
             XElement root = new XElement("Feed");
             root.Add(new XAttribute("FeedType", feed.FeedType.ToString()));
             root.Add(new XAttribute("Url", feed.Url));
-            root.Add(new XAttribute("DisplayName", feed.DisplayName ));
+            root.Add(new XAttribute("DisplayName", feed.DisplayName));
             doc.Element("Feeds").Add(root);
             doc.Save(XmlFilePath);
             return true;
+        }
+
+
+        public ObservableCollection<Item> LoadFeedArticles(string url,FeedType feedType)
+        {
+            FeedParser feedParser = new FeedParser();
+            ObservableCollection<Item> articles= feedParser.Parse(url, feedType);
+            return articles;
         }
     }
 }

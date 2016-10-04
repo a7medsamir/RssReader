@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shared.Helpers;
 using Shared.Model;
 
 namespace Shared.ViewModel
@@ -25,6 +26,7 @@ namespace Shared.ViewModel
         private ObservableCollection<Feed> _feeds = new ObservableCollection<Feed>();
         private Feed _newFeed = new Feed();
         private Feed _selectedFeed = null;
+        private Item _selectedArticle = null;
         private FeedDataSource _dataSource = new FeedDataSource();
         #endregion
 
@@ -50,11 +52,26 @@ namespace Shared.ViewModel
                 if (_selectedFeed != value)
                 {
                     _selectedFeed = value;
+                    if(!string.IsNullOrEmpty(_selectedFeed.Url))
+                        _selectedFeed.FeedArticles = _dataSource.LoadFeedArticles(_selectedFeed.Url, _selectedFeed.FeedType);
                     RaisePropertyChanged("SelectedFeed");
                 }
             }
         }
 
+
+        public Item SelectedArticle
+        {
+            get { return _selectedArticle; }
+            set
+            {
+                if (_selectedArticle != value)
+                {
+                    _selectedArticle = value;
+                    RaisePropertyChanged("SelectedArticle");
+                }
+            }
+        }
         public Feed NewFeed
         {
             get
@@ -75,11 +92,12 @@ namespace Shared.ViewModel
 
         #endregion
 
-        private void AddFeed(object parameter)
+        private void AddFeed(object addedObject)
         {
-            var isDone = _dataSource.AddFeed(parameter);
+            var isDone = _dataSource.AddFeed(addedObject);
             if (isDone)
             {
+                NewFeed = new Feed();
                 Feeds = _dataSource.GetAllFeeds();
             }
         }

@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Feeds>
   <Feed FeedType="RSS" Url="http://feeds.hanselman.com/ScottHanselman" DisplayName="Scott Hanselman Blog" />
-  <!--<Feed FeedType="RSS" Url="http://www.sasapost.com/feed/" DisplayName="SasaPost" />-->
-  <Feed FeedType="Atom" Url="http://www.sasapost.com/feed/" DisplayName="dfasd" />
-  <Feed FeedType="RSS" Url="http://google.com/" DisplayName="dasd" />
-  <Feed FeedType="RSS" Url="http://google.com/" DisplayName="masrawy" />
-  <Feed FeedType="RSS" Url="http://masrawy.com/" DisplayName="masssss" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
-  <Feed FeedType="RSS" Url="http://masre.com/" DisplayName="dasda" />
+  <Feed FeedType="RSS" Url="http://www.sasapost.com/feed/" DisplayName="Sasapost" />
 </Feeds>

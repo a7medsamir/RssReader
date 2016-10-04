@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace Shared.Helpers
     /// </summary>
     public class FeedParser
     {
-        public IList<Item> Parse(string url, FeedType feedType)
+        public ObservableCollection<Item> Parse(string url, FeedType feedType)
         {
             switch (feedType)
             {
@@ -38,7 +39,7 @@ namespace Shared.Helpers
 
 
 
-        public IList<Item> ParseRss(string url)
+        public ObservableCollection<Item> ParseRss(string url)
         {
             try
             {
@@ -57,13 +58,13 @@ namespace Shared.Helpers
                         Content = item.Elements().First(i => i.Name.LocalName == "description").Value,
                         PublishDate = ParseDate(item.Elements().First(i => i.Name.LocalName == "pubDate").Value)
                     };
-                return entries.ToList();
+                return new ObservableCollection<Item>(entries.ToList());
             }
             catch (Exception ex)
             {
                 //write to debugger here 
             }
-            return new List<Item>();
+            return new ObservableCollection<Item>();
         }
 
         private DateTime ParseDate(string value)
@@ -76,11 +77,11 @@ namespace Shared.Helpers
             return DateTime.MinValue;
         }
 
-        private IList<Item> ParseAtom(string url)
+        private ObservableCollection<Item> ParseAtom(string url)
         {
             throw new NotImplementedException();
         }
-        private IList<Item> ParseRdf(string url)
+        private ObservableCollection<Item> ParseRdf(string url)
         {
             throw new NotImplementedException();
         }
