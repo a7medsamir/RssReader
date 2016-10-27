@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Feeds>
   <Feed FeedType="RSS" Url="http://feeds.hanselman.com/ScottHanselman" DisplayName="Scott Hanselman Blog" />
-  <Feed FeedType="RSS" Url="http://www.sasapost.com/feed/" DisplayName="Sasapost" />
 </Feeds>

@@ -8,7 +8,7 @@ namespace SharedTest
     public class FeedParserTest
     {
         [TestMethod]
-        public void ParseTest()
+        public void FeedParseTest()
         {
             FeedParser parser = new FeedParser();
             var result = parser.Parse("http://feeds.hanselman.com/ScottHanselman", FeedType.RSS);

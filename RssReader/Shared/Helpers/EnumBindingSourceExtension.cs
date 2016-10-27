@@ -7,6 +7,10 @@ using System.Windows.Markup;
 
 namespace Shared.Helpers
 {
+    /// <summary>
+    /// A Better Way to Data Bind Enums in WPF
+    /// http://brianlagunas.com/a-better-way-to-data-bind-enums-in-wpf/
+    /// </summary>
     public class EnumBindingSourceExtension : MarkupExtension
     {
         private Type _enumType;

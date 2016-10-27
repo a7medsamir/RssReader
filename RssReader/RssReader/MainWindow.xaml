@@ -24,7 +24,8 @@
                 <TextBlock>URL:</TextBlock>
                 <TextBox x:Name="txtRSSUrl" Height="23" TextWrapping="Wrap" ToolTip="Add RSS Feed URL" Text="{Binding NewFeed.Url}"/>
                 <TextBlock>Feed Type:</TextBlock>
-                <ComboBox Name="ComboBoxRssType" SelectedValue="{Binding NewFeed.FeedType}" Text="Feed Type" Height="23"  ItemsSource="{Binding Source={helpers:EnumBindingSource {x:Type helpers:FeedType}}}">
+                <ComboBox Name="ComboBoxRssType" SelectedValue="{Binding NewFeed.FeedType}" Text="Feed Type" Height="23" 
+                          ItemsSource="{Binding Source={helpers:EnumBindingSource {x:Type helpers:FeedType}}}">
                 </ComboBox>
 
                 <Button x:Name="btnAddRSS" Content="Add Feed" Width="75" HorizontalAlignment="Right" Command="{Binding AddFeedCommand}" CommandParameter="{Binding NewFeed}"/>

@@ -35,10 +35,7 @@ namespace Shared.Helpers
                     throw new NotSupportedException(string.Format("{0} is not supported", feedType.ToString()));
             }
         }
-
-
-
-
+        
         public ObservableCollection<Item> ParseRss(string url)
         {
             try

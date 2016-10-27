@@ -8,6 +8,10 @@ using System.Windows.Controls;
 
 namespace Shared.Helpers
 {
+    /// <summary>
+    /// Displaying html from string in WPF WebBrowser control
+    /// http://stackoverflow.com/questions/2585782/displaying-html-from-string-in-wpf-webbrowser-control
+    /// </summary>
     public static class BrowserBehavior
     {
         public static readonly DependencyProperty HtmlProperty = DependencyProperty.RegisterAttached(
@@ -31,7 +35,7 @@ namespace Shared.Helpers
         {
             WebBrowser wb = d as WebBrowser;
             if (wb != null && e.NewValue != null)
-                wb.NavigateToString(e.NewValue as string);
+                wb.NavigateToString((string) e.NewValue);
         }
     }
 }
